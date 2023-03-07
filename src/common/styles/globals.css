@@ -1,6 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css");
 @import url("https://webfontworld.github.io/pretendard/Pretendard.css");
-@import url("https://fonts.cdnfonts.com/css/palatino");
 
 * {
   box-sizing: border-box;
@@ -10,6 +9,8 @@ html,
 body {
   width: 100%;
   height: 100%;
+
+  font-family: "Palatino", "Pretendard";
 }
 
 #__next {
@@ -20,4 +21,9 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+b {
+  font-weight: bold;
 }

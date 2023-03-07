@@ -1,5 +1,6 @@
+import i18n from "@/apps/global/i18n";
 import "@/common/styles/globals.css";
-import i18n from "@/global/i18n";
+import "@/fonts/font.css";
 
 import type { AppProps } from "next/app";
 import { I18nextProvider } from "react-i18next";

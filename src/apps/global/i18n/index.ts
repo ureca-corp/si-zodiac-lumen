@@ -3,6 +3,11 @@ import { initReactI18next } from "react-i18next";
 import * as en from "./en";
 import * as ko from "./ko";
 
+const Languages = {
+  en: "en",
+  ko: "ko",
+};
+
 const resources: Resource = {
   en: {
     ...en,
@@ -14,8 +19,7 @@ const resources: Resource = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
-  debug: true,
+  lng: Languages.en,
   keySeparator: false,
   interpolation: {
     escapeValue: false,
@@ -24,5 +28,7 @@ i18n.use(initReactI18next).init({
     useSuspense: false,
   },
 });
+
+export { Languages };
 
 export default i18n;

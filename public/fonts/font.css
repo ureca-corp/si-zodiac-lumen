@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Palatino";
+  font-weight: 500;
+  src: url("/fonts/Palatino/PalatinoLTPro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Palatino";
+  font-weight: 600;
+  src: url("/fonts/Palatino/PalatinoLTPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Palatino";
+  font-weight: 100, 200, 300, 400;
+  src: url("/fonts/Palatino/PalatinoLTPro-Light.ttf") format("truetype");
+}
