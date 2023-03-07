@@ -15,3 +15,7 @@ export const Mq = {
   xl: `(max-width:${ScreenType.xl}px)`,
   xxl: `(max-width:${ScreenType.xxl}px)`,
 };
+
+export const Dimension = {
+  laptopInnerWidth: "1200px",
+};
