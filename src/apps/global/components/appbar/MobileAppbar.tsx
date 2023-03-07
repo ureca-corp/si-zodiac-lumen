@@ -20,8 +20,6 @@ const st = {
     align-items: center;
 
     padding: 16px;
-
-    border: 2px solid red;
   `,
   right: css`
     display: flex;

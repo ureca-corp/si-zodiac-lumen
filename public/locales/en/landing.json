@@ -1,3 +1,6 @@
 {
-  "test": "test123"
+  "section1": {
+    "introduce1": "Connects\n <b>Blockchain Ecosystem</b>\nCentered on North America",
+    "introduce2": "Join us in building a decentralized future and experience\nthe many benefits of being a part of the Zodiac Lumen ecosystem."
+  }
 }
