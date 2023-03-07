@@ -6,16 +6,6 @@ export const LaptopAppbar = () => {
   return (
     <div css={st.root}>
       <LogoWithTitle />
-
-      {/* <div css={st.right}>
-        <div css={st.rightMenu}>
-          <a href="#">{"HOME"}</a>
-          <a href="#">{"BUSINESS"}</a>
-          <a href="#">{"COMPANY"}</a>
-        </div>
-
-        <LanguageSelectButton />
-      </div> */}
       <AppbarMenu />
     </div>
   );
@@ -23,13 +13,17 @@ export const LaptopAppbar = () => {
 
 const st = {
   root: css`
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 16px 48px;
+    width: 100%;
 
-    border: 2px solid red;
+    padding: 16px 48px;
 
     color: ${Colors.TextPrimary1};
   `,

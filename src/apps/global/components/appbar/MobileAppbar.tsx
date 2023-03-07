@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { Colors } from "../../theme";
 import { LogoWithTitle, MobileMenuDrawerIconButton } from "./el";
 
 export const MobileAppbar = () => {
