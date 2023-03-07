@@ -12,8 +12,8 @@ export const IntroSection = () => {
   const s = t("section1.introduce1");
 
   return (
-    <section css={st.root} data-aos={"fade-up"}>
-      <div css={st.inner}>
+    <section css={st.root}>
+      <div css={st.inner} data-aos={"fade-up"}>
         <div css={st.textContainer}>
           <h4 css={st.mainText}>
             <Trans
