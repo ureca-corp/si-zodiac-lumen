@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
 import LogoSmall from "@/images/ic_logo_s.png";
+import { Colors } from "@/apps/global/theme";
 
 export const LogoWithTitle = () => {
   return (
@@ -21,5 +22,9 @@ const st = {
     font-family: "Palatino";
     font-weight: bold;
     font-size: 18px;
+
+    color: ${Colors.TextPrimary3};
+
+    padding-top: 4px;
   `,
 };

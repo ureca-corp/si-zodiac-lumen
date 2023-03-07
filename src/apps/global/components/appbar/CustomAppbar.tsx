@@ -3,7 +3,7 @@ import { LaptopAppbar } from "./LaptopAppbar";
 import { MobileAppbar } from "./MobileAppbar";
 
 export const CustomAppbar = () => {
-  const { isSmall } = useCustomMediaQuery();
+  const { isMedium } = useCustomMediaQuery();
 
-  return isSmall ? <MobileAppbar /> : <LaptopAppbar />;
+  return isMedium ? <MobileAppbar /> : <LaptopAppbar />;
 };
