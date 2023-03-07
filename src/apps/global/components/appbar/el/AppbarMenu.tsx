@@ -28,7 +28,7 @@ const st = {
 
     color: ${Colors.TextPrimary1};
 
-    @media ${Mq.sm} {
+    @media ${Mq.md} {
       flex-direction: column;
       align-items: flex-start;
       gap: 36px;
@@ -41,7 +41,7 @@ const st = {
 
     font-family: "Palatino";
 
-    @media ${Mq.sm} {
+    @media ${Mq.md} {
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;

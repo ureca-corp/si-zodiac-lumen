@@ -21,6 +21,8 @@ const st = {
     justify-content: space-between;
     align-items: center;
 
+    gap: 8px;
+
     width: 100%;
 
     padding: 16px 48px;

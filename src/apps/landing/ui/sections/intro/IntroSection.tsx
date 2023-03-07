@@ -62,10 +62,14 @@ const st = {
     }
   `,
   textContainer: css`
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding-top: 200px;
+
+    z-index: 2;
 
     @media ${Mq.sm} {
       padding-top: 70px;
