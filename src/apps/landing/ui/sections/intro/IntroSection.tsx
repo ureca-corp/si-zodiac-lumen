@@ -27,8 +27,8 @@ export const IntroSection = () => {
         </div>
 
         <div css={st.imageAnchor}>
-          <Image src={img1} alt={"img1"} css={st.img1} fill={false} />
-          <Image src={img2} alt={"img2"} css={st.img2} fill={false} />
+          <Image src={img1} alt={"img1"} css={st.img1} width={300} />
+          <Image src={img2} alt={"img2"} css={st.img2} width={500} />
         </div>
       </div>
     </section>
@@ -43,6 +43,10 @@ const st = {
     height: 680px;
 
     overflow: hidden;
+
+    @media ${Mq.sm} {
+      height: 800px;
+    }
   `,
   inner: css`
     position: relative;
@@ -74,7 +78,6 @@ const st = {
     white-space: pre-line;
 
     font-size: 40px;
-    line-height: 1.4;
 
     @media ${Mq.sm} {
       font-size: 24px;
@@ -85,7 +88,6 @@ const st = {
     white-space: pre-line;
 
     font-size: 16px;
-    line-height: 1.4;
 
     @media ${Mq.sm} {
       font-size: 14px;
@@ -121,7 +123,6 @@ const st = {
     bottom: -12px;
     right: -18px;
     aspect-ratio: 1.2;
-    width: 300px;
 
     animation: levitate-animation 3.5s infinite alternate;
     animation-timing-function: ease-in-out;
@@ -139,7 +140,6 @@ const st = {
     top: -160px;
     left: -120px;
     aspect-ratio: 1.2;
-    width: 500px;
 
     animation: levitate-reverse-animation 3.5s infinite alternate;
     animation-delay: 1.5s;

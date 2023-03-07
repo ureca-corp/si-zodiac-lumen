@@ -39,6 +39,8 @@ const st = {
     align-items: center;
     gap: 44px;
 
+    font-family: "Palatino";
+
     @media ${Mq.sm} {
       flex-direction: column;
       align-items: flex-start;

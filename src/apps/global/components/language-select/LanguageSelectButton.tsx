@@ -23,7 +23,7 @@ export const LanguageSelectButton = () => {
   return (
     <div>
       <div css={st.root} onClick={handleOpen}>
-        <div>{languageText}</div>
+        <div css={st.previewLanguage}>{languageText}</div>
         <ExpandMoreRounded fontSize={"small"} />
       </div>
 
@@ -59,6 +59,9 @@ const st = {
     gap: 8px;
     cursor: pointer;
   `,
+  previewLanguage: css`
+    font-family: "Palatino";
+  `,
   menuContainer: css`
     & .MuiPaper-root {
       border: 1px solid rgba(32, 32, 32, 0.06);
@@ -78,8 +81,9 @@ const st = {
 
     border-radius: 6px;
 
+    font-family: "Pretendard";
     font-size: 12px;
-    color: ${Colors.TextPrimary2};
+    color: ${Colors.TextPrimary3};
 
     &:hover {
       background-color: inherit;
