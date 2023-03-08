@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { ExpandMoreRounded } from "@mui/icons-material";
-import { Menu, MenuItem } from "@mui/material";
+import { ButtonBase, Menu, MenuItem } from "@mui/material";
 import { Languages } from "../../i18n";
 import { Colors } from "../../theme";
 import { useLanguageSelect, useMenu } from "./hooks";
@@ -22,13 +22,18 @@ export const LanguageSelectButton = () => {
 
   return (
     <div>
-      <div css={st.root} onClick={handleOpen}>
+      <ButtonBase
+        css={st.root}
+        disableRipple
+        disableTouchRipple
+        onClick={handleOpen}
+      >
         <div css={st.previewLanguage}>{languageText}</div>
         <ExpandMoreRounded fontSize={"small"} />
-      </div>
+      </ButtonBase>
 
       <Menu
-        elevation={0}
+        elevation={1}
         css={st.menuContainer}
         anchorEl={anchorEl}
         open={open}
@@ -42,7 +47,6 @@ export const LanguageSelectButton = () => {
         </MenuItem>
         <MenuItem
           css={[st.menuItem, isLocaleEn && st.menuItemSelected]}
-          disableRipple
           onClick={handleLanguageEnClick}
         >
           {"ENGLISH"}
@@ -57,13 +61,14 @@ const st = {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
+
+    font-weight: inherit;
   `,
   previewLanguage: css`
     font-family: "Palatino";
   `,
   menuContainer: css`
-    z-index: 99999;
+    z-index: 9999;
 
     & .MuiPaper-root {
       border: 1px solid rgba(32, 32, 32, 0.06);
