@@ -4,7 +4,9 @@ import { Trans, useTranslation } from "react-i18next";
 
 import img1 from "@/images/section1/section1_img1.png";
 import img2 from "@/images/section1/section1_img2.png";
+
 import { Mq } from "@/apps/global/theme/limit";
+import { Typography } from "@/apps/global/theme/typography";
 
 export const IntroSection = () => {
   const { t } = useTranslation("landing");
@@ -15,15 +17,17 @@ export const IntroSection = () => {
     <section css={st.root}>
       <div css={st.inner} data-aos={"fade-up"}>
         <div css={st.textContainer}>
-          <h4 css={st.mainText}>
+          <div css={[Typography.mainTitle, st.mainTitle]}>
             <Trans
               suppressHydrationWarning
               components={{ b: <b /> }}
               defaults={s}
             />
-          </h4>
+          </div>
 
-          <h6 css={st.description}>{t("section1.introduce2")}</h6>
+          <h6 css={[Typography.mainDesc, st.description]}>
+            {t("section1.introduce2")}
+          </h6>
         </div>
 
         <div css={st.imageAnchor}>
@@ -78,23 +82,17 @@ const st = {
       align-items: center;
     }
   `,
-  mainText: css`
+  mainTitle: css`
     white-space: pre-line;
 
-    font-size: 40px;
-
     @media ${Mq.sm} {
-      font-size: 24px;
       text-align: center;
     }
   `,
   description: css`
     white-space: pre-line;
 
-    font-size: 16px;
-
     @media ${Mq.sm} {
-      font-size: 14px;
       text-align: center;
       word-break: keep-all;
 

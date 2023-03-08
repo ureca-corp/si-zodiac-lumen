@@ -29,17 +29,4 @@ const st = {
 
     color: ${Colors.TextPrimary1};
   `,
-  right: css`
-    display: flex;
-    align-items: center;
-    gap: 88px;
-
-    font-weight: 600;
-    font-size: 14px;
-  `,
-  rightMenu: css`
-    display: flex;
-    align-items: center;
-    gap: 44px;
-  `,
 };
