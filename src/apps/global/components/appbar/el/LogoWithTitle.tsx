@@ -26,5 +26,7 @@ const st = {
     color: ${Colors.TextPrimary3};
 
     padding-top: 4px;
+
+    opacity: 0.8;
   `,
 };

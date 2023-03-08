@@ -96,6 +96,8 @@ const st = {
   description: css`
     white-space: pre-line;
 
+    opacity: 0.8;
+
     @media ${Mq.sm} {
       text-align: center;
       word-break: keep-all;

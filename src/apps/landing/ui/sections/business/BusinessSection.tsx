@@ -60,6 +60,8 @@ const st = {
     font-family: "Palatino";
     font-weight: 600;
     color: ${Colors.TextPrimary2};
+
+    opacity: 0.8;
   `,
   sectionDesc: css`
     color: ${Colors.TextPrimary3};

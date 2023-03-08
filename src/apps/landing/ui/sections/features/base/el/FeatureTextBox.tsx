@@ -41,5 +41,7 @@ const st = {
 
     white-space: pre-line;
     word-break: keep-all;
+
+    opacity: 0.8;
   `,
 };

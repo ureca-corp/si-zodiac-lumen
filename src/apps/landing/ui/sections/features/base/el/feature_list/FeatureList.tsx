@@ -56,5 +56,7 @@ const st = {
     font-weight: 700;
     white-space: pre-line;
     text-align: center;
+
+    opacity: 0.8;
   `,
 };
