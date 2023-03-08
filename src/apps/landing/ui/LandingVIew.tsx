@@ -1,6 +1,7 @@
 import { CustomAppbar } from "@/apps/global/components";
+import { Colors } from "@/apps/global/theme";
 import { css } from "@emotion/react";
-import { BusinessSection, IntroSection } from "./sections";
+import { BusinessSection, FeaturesSection, IntroSection } from "./sections";
 
 export const LandingView = () => {
   return (
@@ -9,6 +10,7 @@ export const LandingView = () => {
 
       <IntroSection />
       <BusinessSection />
+      <FeaturesSection />
     </div>
   );
 };
@@ -23,6 +25,8 @@ const st = {
     background-image: url("/images/main-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    color: ${Colors.TextPrimary3};
   `,
 
   tBox: css`

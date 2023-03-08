@@ -16,6 +16,7 @@ const st = {
     position: sticky;
     top: 0;
     z-index: 9999;
+    background-color: ${Colors.AppbarBg};
 
     display: flex;
     justify-content: space-between;
@@ -28,18 +29,5 @@ const st = {
     padding: 16px 48px;
 
     color: ${Colors.TextPrimary1};
-  `,
-  right: css`
-    display: flex;
-    align-items: center;
-    gap: 88px;
-
-    font-weight: 600;
-    font-size: 14px;
-  `,
-  rightMenu: css`
-    display: flex;
-    align-items: center;
-    gap: 44px;
   `,
 };

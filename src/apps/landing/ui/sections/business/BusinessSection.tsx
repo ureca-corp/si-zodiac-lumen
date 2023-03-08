@@ -1,4 +1,5 @@
 import { Colors, Dimension, ShapeRadius } from "@/apps/global/theme";
+import { Typography } from "@/apps/global/theme/typography";
 import { css } from "@emotion/react";
 
 import Image from "next/image";
@@ -20,16 +21,19 @@ export const BusinessSection = () => {
         <div css={st.sectionTitle} data-aos={"fade-up"}>
           {"BUSINESS"}
         </div>
-        <div css={st.description} data-aos={"fade-up"}>
+        <p
+          css={[Typography.firstSectionDesc, st.sectionDesc]}
+          data-aos={"fade-up"}
+        >
           {t("section2.description")}
-        </div>
+        </p>
       </div>
 
       <div css={st.cardListContainer}>
         {items.map((it, index) => (
           <div key={index} css={st.itemCard(it.bg)} data-aos={"fade-up"}>
             <Image src={it.icon} alt={"icon"} width={40} height={40} />
-            <div css={st.itemCardTitle}>{it.title}</div>
+            <div css={[Typography.h6, st.itemCardTitle]}>{it.title}</div>
           </div>
         ))}
       </div>
@@ -57,13 +61,10 @@ const st = {
     font-weight: 600;
     color: ${Colors.TextPrimary2};
   `,
-  description: css`
+  sectionDesc: css`
     color: ${Colors.TextPrimary3};
 
-    font-size: 28px;
-    font-weight: 700;
     word-break: keep-all;
-
     text-align: center;
   `,
 
@@ -97,7 +98,6 @@ const st = {
   `,
   itemCardTitle: css`
     white-space: pre-line;
-    font-size: 24px;
 
     color: ${Colors.White};
   `,

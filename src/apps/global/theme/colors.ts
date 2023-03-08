@@ -7,5 +7,7 @@ export const Colors = {
 
   MenuItemSelectedBg: "#2020200a",
 
+  AppbarBg: "#f8f8f8",
+
   White: "#fff",
 };
