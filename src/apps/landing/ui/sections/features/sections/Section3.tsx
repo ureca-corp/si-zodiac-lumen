@@ -35,7 +35,7 @@ export const FeatureSection3 = () => {
           src={MaterialImage}
           alt={"material"}
           fill
-          sizes={""}
+          sizes={"100"}
           data-aos={"fade-up"}
         />
       </div>

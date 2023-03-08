@@ -6,7 +6,7 @@ import { Colors } from "@/apps/global/theme";
 export const LogoWithTitle = () => {
   return (
     <div css={st.root}>
-      <Image src={LogoSmall} alt={"logo"} width={30} />
+      <Image src={LogoSmall} alt={"logo"} width={30} priority={true} />
       <h2 css={st.title}>{"ZODIAC LUMEN"}</h2>
     </div>
   );
@@ -26,5 +26,7 @@ const st = {
     color: ${Colors.TextPrimary3};
 
     padding-top: 4px;
+
+    opacity: 0.8;
   `,
 };

@@ -41,6 +41,8 @@ const st = {
 
     font-family: "Palatino";
 
+    opacity: 0.8;
+
     @media ${Mq.md} {
       flex-direction: column;
       align-items: flex-start;

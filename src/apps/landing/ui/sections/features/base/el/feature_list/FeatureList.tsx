@@ -14,7 +14,7 @@ export const FeatureList = ({ models }: FeatureListProps) => {
       {models.map((it, index) => (
         <div css={st.itemRoot} key={index}>
           <div css={st.itemThumbnail}>
-            <Image src={it.thumbnailUrl} alt={it.desc} fill sizes="" />
+            <Image src={it.thumbnailUrl} alt={it.desc} fill sizes={"100"} />
           </div>
           <p css={st.itemDesc}>{it.desc}</p>
         </div>
@@ -56,5 +56,7 @@ const st = {
     font-weight: 700;
     white-space: pre-line;
     text-align: center;
+
+    opacity: 0.8;
   `,
 };

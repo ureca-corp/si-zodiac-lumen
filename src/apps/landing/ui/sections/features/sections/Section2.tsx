@@ -44,7 +44,7 @@ export const FeatureSection2 = () => {
           src={MaterialImage}
           alt={"material"}
           fill
-          sizes={""}
+          sizes={"100"}
           data-aos={"fade-up"}
         />
       </div>
@@ -54,7 +54,7 @@ export const FeatureSection2 = () => {
           src={MaterialImage2}
           alt={"material2"}
           fill
-          sizes={""}
+          sizes={"100"}
           data-aos={"fade-up"}
         />
       </div>
