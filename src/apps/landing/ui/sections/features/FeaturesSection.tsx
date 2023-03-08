@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import {
   FeatureSection1,
   FeatureSection2,
@@ -8,7 +9,13 @@ import {
 
 export const FeaturesSection = () => {
   return (
-    <div>
+    <div
+      css={css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      `}
+    >
       <FeatureSection1 />
       <FeatureSection2 />
       <FeatureSection3 />

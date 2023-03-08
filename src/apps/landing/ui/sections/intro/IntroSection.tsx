@@ -7,6 +7,10 @@ import img2 from "@/images/section1/section1_img2.png";
 
 import { Mq } from "@/apps/global/theme/limit";
 import { Typography } from "@/apps/global/theme/typography";
+import {
+  levitateAnimation,
+  levitateReverseAnimation,
+} from "@/apps/global/anim";
 
 export const IntroSection = () => {
   const { t } = useTranslation("landing");
@@ -126,16 +130,7 @@ const st = {
     right: -18px;
     aspect-ratio: 1.2;
 
-    animation: levitate-animation 3.5s infinite alternate;
-    animation-timing-function: ease-in-out;
-    @keyframes levitate-animation {
-      0% {
-        transform: translate(0, 0px);
-      }
-      100% {
-        transform: translate(0, 16px);
-      }
-    }
+    ${levitateAnimation}
   `,
   img2: css`
     position: absolute;
@@ -143,16 +138,7 @@ const st = {
     left: -120px;
     aspect-ratio: 1.2;
 
-    animation: levitate-reverse-animation 3.5s infinite alternate;
+    ${levitateReverseAnimation}
     animation-delay: 1.5s;
-    animation-timing-function: ease-in-out;
-    @keyframes levitate-reverse-animation {
-      0% {
-        transform: translate(0, 0px);
-      }
-      100% {
-        transform: translate(0, 16px);
-      }
-    }
   `,
 };

@@ -3,6 +3,12 @@ import { FeatureSection, FeatureSectionTemplateProps } from "../base";
 
 import Card1Thumbnail from "@/images/section3/feature3/feature3_item1.png";
 import PreviewImage from "@/images/section3/feature3/feature3_preview.png";
+import MaterialImage from "@/images/section3/materials/feature3_material.png";
+
+import { levitateAnimation } from "@/apps/global/anim";
+import { Dimension, Mq } from "@/apps/global/theme";
+import { css } from "@emotion/react";
+import Image from "next/image";
 
 export const FeatureSection3 = () => {
   const { getText } = useTranslatedText();
@@ -20,7 +26,21 @@ export const FeatureSection3 = () => {
     previewCardSrc: PreviewImage.src,
   };
 
-  return <FeatureSection {...props} />;
+  return (
+    <section css={st.root}>
+      <FeatureSection {...props} />
+
+      <div css={st.materialWrapper}>
+        <Image
+          src={MaterialImage}
+          alt={"material"}
+          fill
+          sizes={""}
+          data-aos={"fade-up"}
+        />
+      </div>
+    </section>
+  );
 };
 
 const useTranslatedText = () => {
@@ -33,4 +53,29 @@ const useTranslatedText = () => {
   return {
     getText,
   };
+};
+
+const st = {
+  root: css`
+    position: relative;
+
+    max-width: ${Dimension.laptopInnerWidth};
+  `,
+  materialWrapper: css`
+    position: absolute;
+    top: -140px;
+    left: 36%;
+
+    width: 110px;
+    aspect-ratio: 0.917;
+
+    ${levitateAnimation}
+
+    @media ${Mq.md} {
+      top: unset;
+      bottom: 100px;
+      left: unset;
+      right: 24px;
+    }
+  `,
 };

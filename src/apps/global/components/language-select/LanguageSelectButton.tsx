@@ -63,6 +63,8 @@ const st = {
     font-family: "Palatino";
   `,
   menuContainer: css`
+    z-index: 99999;
+
     & .MuiPaper-root {
       border: 1px solid rgba(32, 32, 32, 0.06);
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);

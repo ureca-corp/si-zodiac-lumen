@@ -5,6 +5,8 @@ import Card1Thumbnail from "@/images/section3/feature4/feature4_item1.png";
 import Card2Thumbnail from "@/images/section3/feature4/feature4_item2.png";
 import Card3Thumbnail from "@/images/section3/feature4/feature4_item3.png";
 import PreviewImage from "@/images/section3/feature4/feature4_preview.png";
+import { css } from "@emotion/react";
+import { Dimension } from "@/apps/global/theme";
 
 export const FeatureSection4 = () => {
   const { getText } = useTranslatedText();
@@ -30,7 +32,11 @@ export const FeatureSection4 = () => {
     previewCardSrc: PreviewImage.src,
   };
 
-  return <FeatureSection {...props} />;
+  return (
+    <section css={st.root}>
+      <FeatureSection {...props} />
+    </section>
+  );
 };
 
 const useTranslatedText = () => {
@@ -43,4 +49,12 @@ const useTranslatedText = () => {
   return {
     getText,
   };
+};
+
+const st = {
+  root: css`
+    position: relative;
+
+    max-width: ${Dimension.laptopInnerWidth};
+  `,
 };

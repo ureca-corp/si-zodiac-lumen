@@ -16,6 +16,11 @@ export const MobileAppbar = () => {
 
 const st = {
   root: css`
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: ${Colors.AppbarBg};
+
     display: flex;
     justify-content: space-between;
     align-items: center;

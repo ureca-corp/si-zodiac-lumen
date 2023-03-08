@@ -28,7 +28,7 @@ const st = {
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    gap: 60px;
+    gap: 48px;
 
     flex-wrap: wrap;
 
@@ -44,7 +44,7 @@ const st = {
   `,
   itemThumbnail: css`
     position: relative;
-    min-width: 130px;
+    min-width: 124px;
     aspect-ratio: 1;
 
     border-radius: ${ShapeRadius.Huge};
