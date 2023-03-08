@@ -10,5 +10,14 @@
     "card3Title": "Online\nCasino",
     "card4Title": "Lumen Card\nwith Global\nReach",
     "card5Title": "Investment Oppotunities\n& Immigration Service"
+  },
+  "section3": {
+    "feature1": {
+      "mainTitle": "Convenient and Trustworthy\nLottery Access",
+      "mainDesc": "Our local company, Zodiac Lumen Holdings, is dedicated to providing a reliable supply of Lumens for lottery purchases. With our services, you can rest assured that your investments are secure and trustworthy. We offer maximum convenience and the potential to win a whopping 70 million dollars in prize money.",
+      "card1Desc": "Maximum\n70 billion\ndollars prize",
+      "card2Desc": "Stable Supply\nby Local\nCompany",
+      "card3Desc": "Convenient\nPurchasing\nSystem"
+    }
   }
 }
