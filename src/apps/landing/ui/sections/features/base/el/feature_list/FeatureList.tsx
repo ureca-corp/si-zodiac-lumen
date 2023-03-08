@@ -33,6 +33,8 @@ const st = {
     flex-wrap: wrap;
 
     @media ${Mq.sm} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
   `,
