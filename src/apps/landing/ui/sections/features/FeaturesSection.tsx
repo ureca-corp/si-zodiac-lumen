@@ -1,4 +1,9 @@
-import { FeatureSection1, FeatureSection2, FeatureSection3 } from "./sections";
+import {
+  FeatureSection1,
+  FeatureSection2,
+  FeatureSection3,
+  FeatureSection4,
+} from "./sections";
 
 export const FeaturesSection = () => {
   return (
@@ -6,6 +11,7 @@ export const FeaturesSection = () => {
       <FeatureSection1 />
       <FeatureSection2 />
       <FeatureSection3 />
+      <FeatureSection4 />
     </div>
   );
 };
