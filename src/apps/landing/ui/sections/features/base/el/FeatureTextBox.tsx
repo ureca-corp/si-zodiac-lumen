@@ -1,3 +1,4 @@
+import { Mq } from "@/apps/global/theme";
 import { Typography } from "@/apps/global/theme/typography";
 import { css } from "@emotion/react";
 import { ReactNode } from "react";
@@ -29,7 +30,13 @@ const st = {
     flex: 1;
     gap: 20px;
 
-    max-width: 496px;
+    @media ${Mq.xxl} {
+      max-width: 496px;
+    }
+
+    @media ${Mq.md} {
+      max-width: unset;
+    }
   `,
   title: css`
     ${Typography.h6}
