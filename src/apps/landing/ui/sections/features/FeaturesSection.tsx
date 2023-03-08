@@ -5,6 +5,7 @@ import {
   FeatureSection3,
   FeatureSection4,
   FeatureSection5,
+  FeatureSection6,
 } from "./sections";
 
 export const FeaturesSection = () => {
@@ -21,6 +22,7 @@ export const FeaturesSection = () => {
       <FeatureSection3 />
       <FeatureSection4 />
       <FeatureSection5 />
+      <FeatureSection6 />
     </div>
   );
 };

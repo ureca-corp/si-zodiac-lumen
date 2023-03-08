@@ -78,6 +78,7 @@ const st = {
   root: css`
     position: relative;
 
+    width: 100%;
     max-width: ${Dimension.laptopInnerWidth};
   `,
   materialWrapper1: css`
