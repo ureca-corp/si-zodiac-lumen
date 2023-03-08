@@ -3,6 +3,7 @@ import {
   FeatureSection2,
   FeatureSection3,
   FeatureSection4,
+  FeatureSection5,
 } from "./sections";
 
 export const FeaturesSection = () => {
@@ -12,6 +13,7 @@ export const FeaturesSection = () => {
       <FeatureSection2 />
       <FeatureSection3 />
       <FeatureSection4 />
+      <FeatureSection5 />
     </div>
   );
 };
