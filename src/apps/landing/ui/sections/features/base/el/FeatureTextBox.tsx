@@ -34,6 +34,7 @@ const st = {
     ${Typography.h6}
 
     font-weight: 700;
+    white-space: pre-line;
     word-break: keep-all;
   `,
   desc: css`
