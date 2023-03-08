@@ -27,17 +27,12 @@ const st = {
   root: css`
     display: flex;
     flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 60px;
 
     flex-wrap: wrap;
 
-    @media ${Mq.xl} {
-      justify-content: flex-start;
-    }
-
-    @media ${Mq.md} {
-      justify-content: space-between;
+    @media ${Mq.sm} {
       gap: 24px;
     }
   `,
