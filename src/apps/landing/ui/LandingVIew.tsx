@@ -1,7 +1,12 @@
 import { CustomAppbar } from "@/apps/global/components";
 import { Colors } from "@/apps/global/theme";
 import { css } from "@emotion/react";
-import { BusinessSection, FeaturesSection, IntroSection } from "./sections";
+import {
+  BusinessSection,
+  FeaturesSection,
+  Footer,
+  IntroSection,
+} from "./sections";
 
 export const LandingView = () => {
   return (
@@ -11,6 +16,8 @@ export const LandingView = () => {
       <IntroSection />
       <BusinessSection />
       <FeaturesSection />
+
+      <Footer />
     </div>
   );
 };

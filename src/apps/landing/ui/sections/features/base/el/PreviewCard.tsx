@@ -21,7 +21,7 @@ export const FeaturesSectionPreviewCard = ({
           `,
       ]}
     >
-      <Image src={src} alt={"img"} fill sizes={""} />
+      <Image src={src} alt={"img"} fill sizes={"100"} />
     </div>
   );
 };
