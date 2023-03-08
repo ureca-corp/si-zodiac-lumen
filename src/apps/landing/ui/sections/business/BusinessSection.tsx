@@ -1,4 +1,4 @@
-import { Colors, Dimension, ShapeRadius } from "@/apps/global/theme";
+import { Colors, Dimension, Mq, ShapeRadius } from "@/apps/global/theme";
 import { Typography } from "@/apps/global/theme/typography";
 import { css } from "@emotion/react";
 
@@ -18,9 +18,10 @@ export const BusinessSection = () => {
   return (
     <div css={st.root}>
       <div css={st.textContainer}>
-        <div css={st.sectionTitle} data-aos={"fade-up"}>
-          {"BUSINESS"}
+        <div data-aos={"fade-up"}>
+          <div css={st.sectionTitle}>{"BUSINESS"}</div>
         </div>
+
         <p
           css={[Typography.firstSectionDesc, st.sectionDesc]}
           data-aos={"fade-up"}
@@ -78,6 +79,10 @@ const st = {
 
     max-width: ${Dimension.laptopInnerWidth};
     width: 100%;
+
+    @media ${Mq.sm} {
+      gap: 8px;
+    }
   `,
   itemCard: (bg: string) => css`
     position: relative;

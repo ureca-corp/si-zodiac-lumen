@@ -20,7 +20,7 @@ export const Typography = {
 
   firstSectionDesc: css`
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
 
     @media ${Mq.sm} {
       font-size: 24px;

@@ -27,8 +27,9 @@ const st = {
     display: flex;
     flex-direction: column;
     flex: 1;
-
     gap: 20px;
+
+    max-width: 496px;
   `,
   title: css`
     ${Typography.h6}
