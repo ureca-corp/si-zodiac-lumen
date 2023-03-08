@@ -1,5 +1,5 @@
 import { CustomAppbar } from "@/apps/global/components";
-import { Colors } from "@/apps/global/theme";
+import { Colors, Mq } from "@/apps/global/theme";
 import { css } from "@emotion/react";
 import {
   BusinessSection,
@@ -34,6 +34,10 @@ const st = {
     background-size: cover;
 
     color: ${Colors.TextPrimary3};
+
+    @media ${Mq.sm} {
+      background-size: 150% 100%;
+    }
   `,
 
   tBox: css`
