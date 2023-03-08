@@ -4,13 +4,23 @@ import Image from "next/image";
 
 type FeaturesSectionPreviewCardProps = {
   src: string;
+  isCircularBorder?: boolean;
 };
 
 export const FeaturesSectionPreviewCard = ({
   src,
+  isCircularBorder = true,
 }: FeaturesSectionPreviewCardProps) => {
   return (
-    <div css={st.root}>
+    <div
+      css={[
+        st.root,
+        isCircularBorder &&
+          css`
+            border-radius: ${ShapeRadius.Large};
+          `,
+      ]}
+    >
       <Image src={src} alt={"img"} fill sizes={""} />
     </div>
   );
@@ -23,8 +33,6 @@ const st = {
 
     width: 100%;
     aspect-ratio: 1.93;
-
-    border-radius: ${ShapeRadius.Large};
 
     overflow: hidden;
   `,

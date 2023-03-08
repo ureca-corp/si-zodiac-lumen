@@ -4,6 +4,6 @@ export type FeatureSectionTemplateProps = {
   isLocatePreviewLeft?: boolean;
   title: string;
   desc: string;
-  featureModels: FeatureListItemModel[];
   previewCardSrc: string;
+  featureModels?: FeatureListItemModel[];
 };

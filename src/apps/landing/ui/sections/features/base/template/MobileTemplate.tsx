@@ -8,19 +8,28 @@ export const MobileFeatureSectionTemplate = ({
   featureModels,
   previewCardSrc,
 }: FeatureSectionTemplateProps) => {
+  const isExistFeatureCardItems = !!featureModels;
+
   return (
     <div css={st.root}>
       <div data-aos={"fade-up"}>
         <FeatureTextBox
           title={title}
           desc={desc}
-          middleImage={<FeaturesSectionPreviewCard src={previewCardSrc} />}
+          middleImage={
+            <FeaturesSectionPreviewCard
+              src={previewCardSrc}
+              isCircularBorder={isExistFeatureCardItems}
+            />
+          }
         />
       </div>
 
-      <div data-aos={"fade-up"}>
-        <FeatureList models={featureModels} />
-      </div>
+      {featureModels && (
+        <div data-aos={"fade-up"}>
+          <FeatureList models={featureModels} />
+        </div>
+      )}
     </div>
   );
 };

@@ -11,6 +11,8 @@ export const FeatureSectionTemplate = ({
   featureModels,
   previewCardSrc,
 }: FeatureSectionTemplateProps) => {
+  const isExistFeatureCardItems = !!featureModels;
+
   return (
     <div css={st.root} data-aos={"fade-up"}>
       <div
@@ -20,18 +22,35 @@ export const FeatureSectionTemplate = ({
             css`
               flex-direction: row-reverse;
             `,
+          !isExistFeatureCardItems &&
+            css`
+              align-items: center;
+            `,
         ]}
       >
         <div css={st.innerLeft}>
           <FeatureTextBox title={title} desc={desc} />
 
-          <div css={st.cardsWrapper}>
-            <FeatureList models={featureModels} />
-          </div>
+          {isExistFeatureCardItems && (
+            <div css={st.cardsWrapper}>
+              <FeatureList models={featureModels} />
+            </div>
+          )}
         </div>
 
-        <div css={st.innerRight}>
-          <FeaturesSectionPreviewCard src={previewCardSrc} />
+        <div
+          css={[
+            st.innerRight,
+            isExistFeatureCardItems &&
+              css`
+                padding-top: 100px;
+              `,
+          ]}
+        >
+          <FeaturesSectionPreviewCard
+            src={previewCardSrc}
+            isCircularBorder={isExistFeatureCardItems}
+          />
         </div>
       </div>
     </div>
@@ -62,8 +81,6 @@ const st = {
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    padding-top: 100px;
   `,
   cardsWrapper: css`
     margin-top: 64px;

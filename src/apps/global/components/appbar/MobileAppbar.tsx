@@ -18,7 +18,7 @@ const st = {
   root: css`
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 99;
     background-color: ${Colors.AppbarBg};
 
     display: flex;
