@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { Menu, MenuProps } from "@mui/material";
+import { Mq } from "../../theme";
 
 export const CustomDropdownMenu = (p: MenuProps) => {
   return (
@@ -28,6 +29,12 @@ const st = {
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
       border-radius: 6px;
       padding: 8px;
+
+      margin-top: 24px;
+
+      @media ${Mq.md} {
+        margin-top: 8px;
+      }
     }
 
     & .MuiList-root {
