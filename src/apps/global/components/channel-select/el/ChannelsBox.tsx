@@ -124,6 +124,7 @@ const ChannelMenuItem = ({ title, badgeTitle }: ChannelMenuItemProps) => {
     <MenuItem
       css={css`
         border-radius: 6px;
+        min-height: unset;
         height: 36px;
 
         @media ${Mq.md} {
