@@ -59,13 +59,8 @@ const st = {
     width: 100%;
     height: 100%;
 
-    /* padding-left: 10%; */
-    /* padding-right: 10%; */
-
-    @media ${Mq.sm} {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
+    padding-left: 16px;
+    padding-right: 16px;
   `,
   textContainer: css`
     position: relative;

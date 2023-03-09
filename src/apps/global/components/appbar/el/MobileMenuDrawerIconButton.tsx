@@ -41,16 +41,18 @@ const st = {
     flex-direction: column;
     align-items: flex-start;
 
-    gap: 24px;
+    gap: 20px;
 
     min-width: 320px;
 
-    padding: 24px 32px;
+    padding-bottom: 120px;
   `,
   IconBtnWrapper: css`
     display: flex;
     justify-content: flex-end;
     width: 100%;
+
+    padding: 12px 28px;
   `,
   closeIcon: css`
     font-size: 12px;
