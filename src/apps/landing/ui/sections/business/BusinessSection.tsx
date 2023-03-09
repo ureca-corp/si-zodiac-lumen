@@ -49,6 +49,8 @@ const st = {
     align-items: center;
     gap: 64px;
 
+    width: 100%;
+
     padding: 0 16px 200px 16px;
   `,
   textContainer: css`

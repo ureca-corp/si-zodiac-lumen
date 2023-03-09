@@ -5,12 +5,9 @@ import { Trans, useTranslation } from "react-i18next";
 import img1 from "@/images/section1/section1_img1.png";
 import img2 from "@/images/section1/section1_img2.png";
 
+import { levitateAnimation } from "@/apps/global/anim";
 import { Mq } from "@/apps/global/theme/limit";
 import { Typography } from "@/apps/global/theme/typography";
-import {
-  levitateAnimation,
-  levitateReverseAnimation,
-} from "@/apps/global/anim";
 
 export const IntroSection = () => {
   const { t } = useTranslation("landing");
@@ -48,6 +45,7 @@ const st = {
     position: relative;
 
     width: 100%;
+    max-width: 1500px;
     height: 680px;
 
     overflow: hidden;
@@ -61,8 +59,8 @@ const st = {
     width: 100%;
     height: 100%;
 
-    padding-left: 10%;
-    padding-right: 10%;
+    /* padding-left: 10%; */
+    /* padding-right: 10%; */
 
     @media ${Mq.sm} {
       padding-left: 16px;
@@ -140,7 +138,16 @@ const st = {
     left: -120px;
     aspect-ratio: 1.2;
 
-    ${levitateReverseAnimation}
+    animation: intro-levitate-reverse-animation 3.2s infinite alternate;
+    animation-timing-function: ease-in-out;
+    @keyframes intro-levitate-reverse-animation {
+      0% {
+        transform: translate(0, 0px);
+      }
+      100% {
+        transform: translate(0, 36px);
+      }
+    }
     animation-delay: 1.5s;
   `,
 };

@@ -42,6 +42,8 @@ export const Footer = () => {
 const st = {
   root: css`
     color: ${Colors.White};
+
+    width: 100%;
   `,
   top: css`
     display: flex;
