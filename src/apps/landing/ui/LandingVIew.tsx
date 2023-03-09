@@ -26,8 +26,7 @@ const st = {
   root: css`
     display: flex;
     flex-direction: column;
-
-    width: 100%;
+    align-items: center;
 
     background-image: url("/images/main-background.png");
     background-repeat: no-repeat;
