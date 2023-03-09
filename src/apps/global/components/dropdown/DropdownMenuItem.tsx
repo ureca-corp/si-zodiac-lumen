@@ -16,7 +16,7 @@ const st = {
   menuItem: css`
     min-height: 32px !important;
 
-    padding: 8px 44px 8px 8px;
+    padding: 8px;
 
     border-radius: 6px;
 

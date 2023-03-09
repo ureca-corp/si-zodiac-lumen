@@ -22,6 +22,7 @@ const st = {
     font-family: "Palatino";
     font-weight: bold;
     font-size: 18px;
+    white-space: nowrap;
 
     color: ${Colors.TextPrimary3};
 

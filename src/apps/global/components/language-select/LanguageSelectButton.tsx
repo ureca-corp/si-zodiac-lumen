@@ -7,12 +7,11 @@ import {
   CustomDropdownMenuItem,
   useDropdownMenu,
 } from "../dropdown";
-import { useLanguageSelect } from "./hooks";
+import { useLanguageState } from "./hooks";
 
 export const LanguageSelectButton = () => {
   const { anchorEl, open, handleOpen, handleClose } = useDropdownMenu();
-  const { handleLanguageChange, isLocaleEn, languageText } =
-    useLanguageSelect();
+  const { handleLanguageChange, isLocaleEn, languageText } = useLanguageState();
 
   const handleLanguageEnClick = () => {
     handleLanguageChange(Languages.en);
@@ -37,18 +36,20 @@ export const LanguageSelectButton = () => {
       </ButtonBase>
 
       <CustomDropdownMenu anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <CustomDropdownMenuItem
-          isSelected={!isLocaleEn}
-          onClick={handleLanguageKoClick}
-        >
-          {"KOREAN"}
-        </CustomDropdownMenuItem>
-        <CustomDropdownMenuItem
-          isSelected={isLocaleEn}
-          onClick={handleLanguageEnClick}
-        >
-          {"ENGLISH"}
-        </CustomDropdownMenuItem>
+        <div css={st.menuInner}>
+          <CustomDropdownMenuItem
+            isSelected={!isLocaleEn}
+            onClick={handleLanguageKoClick}
+          >
+            {"KOREAN"}
+          </CustomDropdownMenuItem>
+          <CustomDropdownMenuItem
+            isSelected={isLocaleEn}
+            onClick={handleLanguageEnClick}
+          >
+            {"ENGLISH"}
+          </CustomDropdownMenuItem>
+        </div>
       </CustomDropdownMenu>
     </div>
   );
@@ -61,8 +62,12 @@ const st = {
     gap: 8px;
 
     font-weight: inherit;
+    opacity: 0.8;
   `,
   previewLanguage: css`
     font-family: "Palatino";
+  `,
+  menuInner: css`
+    min-width: 120px;
   `,
 };

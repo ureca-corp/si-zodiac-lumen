@@ -1,28 +1,12 @@
 import { css } from "@emotion/react";
 import { ExpandMoreRounded } from "@mui/icons-material";
 import { ButtonBase } from "@mui/material";
-import Image from "next/image";
-import { Languages } from "../../i18n";
-import { Typography } from "../../theme/typography";
-import {
-  CustomDropdownMenu,
-  CustomDropdownMenuItem,
-  useDropdownMenu,
-} from "../dropdown";
+import { CustomDropdownMenu, useDropdownMenu } from "../dropdown";
 
-import TelegramIcon from "@/images/icons/ic_telegram.png";
-import Link from "next/link";
+import { ChannelsBox } from "./el/ChannelsBox";
 
 export const ChannelSelectButton = () => {
   const { anchorEl, open, handleOpen, handleClose } = useDropdownMenu();
-
-  const handleLanguageEnClick = () => {
-    handleClose();
-  };
-
-  const handleLanguageKoClick = () => {
-    handleClose();
-  };
 
   return (
     <div>
@@ -37,26 +21,7 @@ export const ChannelSelectButton = () => {
       </ButtonBase>
 
       <CustomDropdownMenu anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <div
-          css={css`
-            min-width: 200px;
-            height: 200px; // TODO: Delete
-          `}
-        >
-          asd
-        </div>
-        {/* <CustomDropdownMenuItem
-          isSelected={!isLocaleEn}
-          onClick={handleLanguageKoClick}
-        >
-          {"KOREAN"}
-        </CustomDropdownMenuItem>
-        <CustomDropdownMenuItem
-          isSelected={isLocaleEn}
-          onClick={handleLanguageEnClick}
-        >
-          {"ENGLISH"}
-        </CustomDropdownMenuItem> */}
+        <ChannelsBox />
       </CustomDropdownMenu>
     </div>
   );
@@ -69,6 +34,7 @@ const st = {
     gap: 8px;
 
     font-weight: inherit;
+    opacity: 0.8;
   `,
   previewLanguage: css`
     font-family: "Palatino";

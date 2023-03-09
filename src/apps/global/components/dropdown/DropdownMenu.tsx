@@ -2,7 +2,21 @@ import { css } from "@emotion/react";
 import { Menu, MenuProps } from "@mui/material";
 
 export const CustomDropdownMenu = (p: MenuProps) => {
-  return <Menu elevation={1} css={st.menuContainer} {...p} />;
+  return (
+    <Menu
+      elevation={1}
+      css={st.menuContainer}
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "center",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "center",
+      }}
+      {...p}
+    />
+  );
 };
 
 const st = {
