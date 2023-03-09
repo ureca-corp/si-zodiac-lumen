@@ -1,26 +1,26 @@
 import { css } from "@emotion/react";
 import { ExpandMoreRounded } from "@mui/icons-material";
 import { ButtonBase } from "@mui/material";
+import Image from "next/image";
 import { Languages } from "../../i18n";
+import { Typography } from "../../theme/typography";
 import {
   CustomDropdownMenu,
   CustomDropdownMenuItem,
   useDropdownMenu,
 } from "../dropdown";
-import { useLanguageSelect } from "./hooks";
 
-export const LanguageSelectButton = () => {
+import TelegramIcon from "@/images/icons/ic_telegram.png";
+import Link from "next/link";
+
+export const ChannelSelectButton = () => {
   const { anchorEl, open, handleOpen, handleClose } = useDropdownMenu();
-  const { handleLanguageChange, isLocaleEn, languageText } =
-    useLanguageSelect();
 
   const handleLanguageEnClick = () => {
-    handleLanguageChange(Languages.en);
     handleClose();
   };
 
   const handleLanguageKoClick = () => {
-    handleLanguageChange(Languages.ko);
     handleClose();
   };
 
@@ -32,12 +32,20 @@ export const LanguageSelectButton = () => {
         disableTouchRipple
         onClick={handleOpen}
       >
-        <div css={st.previewLanguage}>{languageText}</div>
+        <div css={st.previewLanguage}>{"CHANNELS"}</div>
         <ExpandMoreRounded fontSize={"small"} />
       </ButtonBase>
 
       <CustomDropdownMenu anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <CustomDropdownMenuItem
+        <div
+          css={css`
+            min-width: 200px;
+            height: 200px; // TODO: Delete
+          `}
+        >
+          asd
+        </div>
+        {/* <CustomDropdownMenuItem
           isSelected={!isLocaleEn}
           onClick={handleLanguageKoClick}
         >
@@ -48,7 +56,7 @@ export const LanguageSelectButton = () => {
           onClick={handleLanguageEnClick}
         >
           {"ENGLISH"}
-        </CustomDropdownMenuItem>
+        </CustomDropdownMenuItem> */}
       </CustomDropdownMenu>
     </div>
   );

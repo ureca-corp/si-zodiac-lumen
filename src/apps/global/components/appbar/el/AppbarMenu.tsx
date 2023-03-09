@@ -1,6 +1,7 @@
 import { Colors } from "@/apps/global/theme";
 import { Mq } from "@/apps/global/theme/limit";
 import { css } from "@emotion/react";
+import { ChannelSelectButton } from "../../channel-select";
 import { LanguageSelectButton } from "../../language-select";
 
 export const AppbarMenu = () => {
@@ -10,6 +11,8 @@ export const AppbarMenu = () => {
         <a href="#">{"HOME"}</a>
         <a href="#">{"BUSINESS"}</a>
         <a href="#">{"COMPANY"}</a>
+        <a href="#">{"WHITE PAPER"}</a>
+        <ChannelSelectButton />
       </div>
 
       <LanguageSelectButton />
