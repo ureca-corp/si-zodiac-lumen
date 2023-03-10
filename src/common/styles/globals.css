@@ -11,6 +11,8 @@ body {
 
   font-family: "Pretendard";
   /* "Palatino",  */
+
+  line-height: 1.4;
 }
 
 #__next {

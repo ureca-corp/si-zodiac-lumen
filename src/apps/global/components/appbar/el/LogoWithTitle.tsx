@@ -1,13 +1,12 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
 import LogoSmall from "@/images/ic_logo_s.png";
+import { Colors } from "@/apps/global/theme";
 
 export const LogoWithTitle = () => {
   return (
     <div css={st.root}>
-      <div css={st.logoWrapper}>
-        <Image src={LogoSmall} alt={"logo"} fill />
-      </div>
+      <Image src={LogoSmall} alt={"logo"} width={30} priority={true} />
       <h2 css={st.title}>{"ZODIAC LUMEN"}</h2>
     </div>
   );
@@ -19,14 +18,16 @@ const st = {
     align-items: center;
     gap: 8px;
   `,
-  logoWrapper: css`
-    position: relative;
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-  `,
   title: css`
+    font-family: "Palatino";
     font-weight: bold;
     font-size: 18px;
+    white-space: nowrap;
+
+    color: ${Colors.TextPrimary3};
+
+    padding-top: 4px;
+
+    opacity: 0.8;
   `,
 };

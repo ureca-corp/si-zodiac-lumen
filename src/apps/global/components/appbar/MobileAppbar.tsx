@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { Colors } from "../../theme";
 import { LogoWithTitle, MobileMenuDrawerIconButton } from "./el";
 
 export const MobileAppbar = () => {
@@ -15,11 +16,20 @@ export const MobileAppbar = () => {
 
 const st = {
   root: css`
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: ${Colors.AppbarBg};
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 16px;
+    width: 100%;
+
+    padding: 8px 16px;
+
+    color: ${Colors.TextPrimary1};
   `,
   right: css`
     display: flex;
